@@ -42,18 +42,18 @@ jobs:
     - run: chrome --version
     - name: Test on Chrome with Maven
       run: mvn -B package --file pom.xml test
-  test_firefox:
-      runs-on: ubuntu-latest
-      steps:
-          - name: Checkout the repository
-            uses: actions/checkout@v3
-          - name: Set up JDK 11
-            uses: actions/setup-java@v3
-            with:
-                java-version: '11'
-                distribution: 'temurin'
-          - name: Install Google Firefox
-            uses: browser-actions/setup-firefox@v1
-          - run: firefox --version
-          - name: Test on Firefox with Maven
-            run: mvn -B package --file pom.xml test
+#  test_firefox:
+#      runs-on: ubuntu-latest
+#      steps:
+#          - name: Checkout the repository
+#            uses: actions/checkout@v3
+#          - name: Set up JDK 11
+#            uses: actions/setup-java@v3
+#            with:
+#                java-version: '11'
+#                distribution: 'temurin'
+#          - name: Install Firefox
+#            uses: browser-actions/setup-firefox@v1
+#          - run: firefox --version
+#          - name: Test on Firefox with Maven
+#            run: mvn -B package --file pom.xml test

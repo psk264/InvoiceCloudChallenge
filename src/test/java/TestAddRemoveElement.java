@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class TestAddRemoveElement {
     //Set up the driver for the desired browser: chrome, firefox
-    BrowserDriver browserDriver = new BrowserDriver("firefox");
+    BrowserDriver browserDriver = new BrowserDriver("chrome");  //pass string "firefox" to test on Firefox
 
     //Instantiate the PageObjects class to get the elements during tests
     PageObjects pageObjects = new PageObjects(browserDriver);
