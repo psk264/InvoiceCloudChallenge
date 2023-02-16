@@ -42,6 +42,6 @@ jobs:
         distribution: 'temurin'
     - name: Install Google Chrome
       uses: browser-actions/setup-chrome@v1
-      run: chrome --version
+    - run: chrome --version
     - name: Test with Maven
       run: mvn -B package --file pom.xml test
