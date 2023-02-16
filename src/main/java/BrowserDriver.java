@@ -15,6 +15,7 @@ public class BrowserDriver {
         if (browser.equalsIgnoreCase("firefox")) {
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("start-maximized");
+            options.addArguments("--headless");
             driver = new FirefoxDriver(options);
             return;
         }
@@ -25,6 +26,7 @@ public class BrowserDriver {
         System.out.println("Initiating default case chrome driver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
 
 
